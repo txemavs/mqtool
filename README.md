@@ -1,6 +1,6 @@
 # mqtool
 
-A small MQTT tool to publish or subscribe to a channel. 
+A small MQTT tool to publish or subscribe to a topic. 
 
 Examples:
 ```
