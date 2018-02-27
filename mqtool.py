@@ -46,7 +46,10 @@ class Broker(object):
             self.client.subscribe(topic)
 
         def on_message(client, userdata, msg):
-            print(u"%s %s" % (msg.topic, repr(msg.payload)))
+            try:
+                print("%s %s" % (msg.topic, repr(msg.payload)))
+            except Exception as e:
+                print("Error: %s" % e)
 
         self.connect(on_connect, on_message)
         try:
@@ -102,7 +105,7 @@ def main():
         broker.auth(args.user, args.password)
         
     if args.subscribe:
-        broker.subscribe()
+        broker.subscribe(args.topic)
     else:
         broker.publish(args.topic, args.message)
 
