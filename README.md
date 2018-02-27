@@ -4,9 +4,9 @@ A small MQTT tool to publish or subscribe to a topic.
 
 Examples:
 ```
-mqtool -h 192.168.4.1 -t home/clock --sub
+mqtool -h test.mosquitto.org -t home/# --sub
 
-mqtool -h 192.168.4.1 -t home/clock -m "Hello World"
+mqtool -h test.mosquitto.org -t home/clock -m "Hello World"
 ```
 
 It can be compiled to a MS-DOS executable using py2exe.
